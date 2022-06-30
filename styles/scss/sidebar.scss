@@ -1,0 +1,98 @@
+@import "colors";
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 280px;
+    background-color: #f8f8f8;
+    height: calc(100vh - 60px);
+
+    @media screen and (max-width: 1200px) {
+        width: 60px;
+        overflow: hidden;
+        .socials {
+            display: none;
+        }
+    }
+
+    .streamers {
+        height: 100%;
+        border-bottom: 3px solid white;
+        overflow-y: auto;
+
+        .streamer {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color .2s ease-out;
+
+            .streamer_image {
+                margin-right: 15px;
+                width: 30px;
+            }
+            .streamer_name {
+                margin-right: 20px;
+                &:hover {
+                    color: #3a84da;
+                }
+            }
+            .blink {
+                width: 10px;
+                height: 10px;
+                background-color: red;
+                border-radius: 50%;
+                opacity: .1;
+                animation: blink 2s infinite;
+                @keyframes blink {
+                    0%{
+                        opacity: .1;
+                    }
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: .1;
+                    }
+                }
+            }
+            &:hover {
+                background-color: #d0cfcf;
+            }
+        }
+
+    }
+
+    .socials {
+        margin: 15px;
+        background-color: #bebebe;
+        border-radius: 5px;
+        height: 100px;
+        padding: 15px;
+        .title {
+            text-align: center;
+            font-weight: bolder;
+            letter-spacing: .1rem;
+        }
+        .social_icons{
+            text-align: center;
+            font-size: 25px;
+            margin-top: 10px;
+            i {
+                padding: 0 8px 0 8px;
+                &:hover {
+                    color: #3a84da;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+
+
