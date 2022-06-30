@@ -1,0 +1,153 @@
+@import "colors";
+
+header {
+    padding: 0 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 7px 12px -5px rgba(0, 0, 0, 0.63);
+
+    & a {
+        text-decoration: none;
+    }
+
+    .header_icon {
+        color: $icons-color;
+        font-size: 20px;
+
+        &:hover {
+            cursor: pointer;
+            color: $icons-color-hover;
+        }
+    }
+
+}
+
+//Logo
+a.header_logo {
+    display: flex;
+    flex-direction: row;
+
+    & img {
+        // TODO: set orange color
+        filter: invert(82%) sepia(49%) saturate(2117%) hue-rotate(334deg) brightness(96%) contrast(98%);
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    & h1 {
+        font-size: 30px;
+        color: $accent-color;
+    }
+}
+
+//Search
+.search {
+    width: 40%;
+    margin-right: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    width: 100%;
+    border: 1px solid #cbcbcb;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 3px 0 0 3px;
+    outline: none;
+
+    &:focus {
+        border: 2px solid #3a84da;
+    }
+}
+
+.searchButton {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border: 1px solid #d9d9d9;
+    //background: #D9D9D9FF;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background-color .2s ease-out;
+
+    & i {
+        color: black;
+        font-size: 15px;
+    }
+
+    &:hover {
+        background-color: $icons-color-hover;
+    }
+}
+
+//Menu
+.menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .bell {
+        margin-right: 15px;
+    }
+
+    .menu_paw {
+        display: block;
+        font-size: 15px;
+        padding: 10px;
+        border-radius: 50%;
+        background-color: $accent-color;
+        transition: background-color .2s ease-out;
+        &:hover {
+            background-color: #dadada;
+            .dropdown {
+                display: block;
+            }
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 35px;
+            right: 0;
+            background-color: white;
+            min-width: 140px;
+            border: 1px solid #cecece;
+            border-radius: 5px;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1;
+
+            li {
+                font-family: Roboto, serif;
+                font-weight: normal;
+                padding: 8px;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                &:hover {
+                    background-color: #d9d9d9;
+                }
+
+                &:last-child {
+                    border-top: 1px solid #868686;
+                    color: red;
+                }
+            }
+
+        }
+
+        &:hover {
+
+        }
+    }
+}
+
+
+
