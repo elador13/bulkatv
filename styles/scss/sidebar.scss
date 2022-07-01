@@ -6,10 +6,11 @@
     justify-content: space-between;
     width: 280px;
     background-color: #f8f8f8;
+    border-right: 1px solid #e7e7e7;
     height: calc(100vh - 60px);
 
     @media screen and (max-width: 1200px) {
-        width: 60px;
+        width: 65px;
         overflow: hidden;
         .socials {
             display: none;
@@ -17,6 +18,7 @@
     }
 
     .streamers {
+        width: 228px;
         height: 100%;
         border-bottom: 3px solid white;
         overflow-y: auto;
@@ -30,11 +32,16 @@
             transition: background-color .2s ease-out;
 
             .streamer_image {
-                margin-right: 15px;
-                width: 30px;
+                height: 40px;
+                width: 40px;
+                object-fit: cover;
+                border-radius: 50%;
             }
+
             .streamer_name {
+                min-width: 65px;
                 margin-right: 20px;
+                text-overflow: ellipsis;
                 &:hover {
                     color: #3a84da;
                 }
