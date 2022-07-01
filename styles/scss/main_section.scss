@@ -13,11 +13,17 @@
         background-color: #ffffff;
         width: 100%;
 
-        .horizontal_slider {
+        .horizontal_scroll {
+            margin-top: 20px;
             padding: 20px;
             display: flex;
             flex-direction: row;
-            overflow: auto;
+            align-items: center;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            &::-webkit-scrollbar {
+                display: none;
+            }
 
             a {
                 margin: 0 5px;
