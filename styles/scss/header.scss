@@ -29,18 +29,23 @@ header {
 //Logo
 a.header_logo {
     display: flex;
+    align-items: flex-end;
     flex-direction: row;
 
-    & img {
-        // TODO: set orange color
+    img {
         filter: invert(82%) sepia(49%) saturate(2117%) hue-rotate(334deg) brightness(96%) contrast(98%);
-        width: 30px;
+        width: 45px;
         margin-right: 10px;
     }
 
-    & h1 {
-        font-size: 30px;
+    h1 {
+        font-size: 40px;
         color: $accent-color;
+    }
+    @media (max-width: 630px) {
+        h1 {
+            font-size: 30px;
+        }
     }
 }
 

@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 280px;
+    width: 250px;
     background-color: #f8f8f8;
     border-right: 1px solid #e7e7e7;
     height: calc(100vh - 60px);
@@ -18,7 +18,7 @@
     }
 
     .streamers {
-        width: 228px;
+        width: 250px;
         height: 100%;
         border-bottom: 3px solid white;
         overflow-y: auto;
@@ -26,12 +26,13 @@
         .streamer {
             padding: 10px;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             cursor: pointer;
             transition: background-color .2s ease-out;
 
             .streamer_image {
+                margin-right: 20px;
                 height: 40px;
                 width: 40px;
                 object-fit: cover;
@@ -39,14 +40,18 @@
             }
 
             .streamer_name {
-                min-width: 65px;
-                margin-right: 20px;
+                width: 100px;
+                white-space: nowrap;
+                overflow: hidden;
+                //margin-right: 20px;
+                font-size: 1.1em;
                 text-overflow: ellipsis;
                 &:hover {
-                    color: #3a84da;
+                    color: $main-hover-color;
                 }
             }
             .blink {
+                margin-left: 15px;
                 width: 10px;
                 height: 10px;
                 background-color: red;
@@ -68,6 +73,10 @@
             &:hover {
                 background-color: #d0cfcf;
             }
+
+            .viewers {
+                margin-left: auto;
+            }
         }
 
     }
@@ -79,18 +88,20 @@
         height: 100px;
         padding: 15px;
         .title {
+            margin-bottom: 10px;
             text-align: center;
-            font-weight: bolder;
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.5;
             letter-spacing: .1rem;
         }
         .social_icons{
             text-align: center;
-            font-size: 25px;
-            margin-top: 10px;
+            font-size: 1.8rem;
             i {
                 padding: 0 8px 0 8px;
                 &:hover {
-                    color: #3a84da;
+                    color: $main-hover-color;
                 }
             }
         }
