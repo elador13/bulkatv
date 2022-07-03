@@ -1,0 +1,118 @@
+@import "_colors";
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #e7e7e7;
+    height: calc(100vh - 60px);
+
+    @media screen and (max-width: 1200px) {
+        width: 100px;
+        overflow: hidden;
+        .socials,
+        .streamer_name,
+        .blink {
+            display: none;
+        }
+    }
+
+    .streamers {
+        width: 300px;
+        height: 100%;
+        border-bottom: 3px solid white;
+        overflow-y: auto;
+
+        .streamer {
+            padding: 15px 25px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color .2s ease-out;
+
+            .streamer_image {
+                margin-right: 20px;
+                height: 40px;
+                width: 40px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+
+            .streamer_name {
+                width: 115px;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size: 1.1em;
+                text-overflow: ellipsis;
+                &:hover {
+                    color: $main-hover-color;
+                }
+            }
+            .blink {
+                margin-left: 20px;
+                width: 10px;
+                height: 10px;
+                background-color: red;
+                border-radius: 50%;
+                opacity: .1;
+                animation: blink 2s infinite;
+                @keyframes blink {
+                    0%{
+                        opacity: .1;
+                    }
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: .1;
+                    }
+                }
+            }
+            &:hover {
+                background-color: #d0cfcf;
+            }
+
+            .viewers {
+                margin-left: auto;
+            }
+        }
+
+    }
+
+    .socials {
+        margin: 15px;
+        background-color: #bebebe;
+        border-radius: 5px;
+        height: 100px;
+        padding: 15px;
+        .title {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: .1rem;
+        }
+        .social_icons{
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.8rem;
+            i {
+                padding: 0 8px 0 8px;
+                &:hover {
+                    color: $main-hover-color;
+                }
+            }
+        }
+
+
+    }
+}
+
+
+
+
+

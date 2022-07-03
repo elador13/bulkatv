@@ -1,0 +1,32 @@
+@import "_colors";
+@import "_header";
+@import "_main_section";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar{
+        width: 10px;
+        height: 9px;
+        background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb
+    {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: #757575;
+    }
+    &::selection {
+        background: $accent-color;
+        color: white;
+    }
+}
+
+body {
+    font-family: Roboto, serif;
+}
